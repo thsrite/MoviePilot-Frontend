@@ -186,7 +186,6 @@ onMounted(() => {
           fixed-header
           hover
           :items-per-page-text="t('dialog.siteResource.itemsPerPage')"
-          :page-text="t('dialog.siteResource.pageText')"
           :loading-text="t('dialog.siteResource.loading')"
           class="h-full"
         >
