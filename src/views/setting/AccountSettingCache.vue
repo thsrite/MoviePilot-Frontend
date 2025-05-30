@@ -30,8 +30,8 @@ const cacheData = ref<TorrentCacheData>({
 })
 
 // 筛选条件
-const titleFilter = ref('')
-const siteFilter = ref('')
+const titleFilter = ref<string | null>(null)
+const siteFilter = ref<string | null>(null)
 
 // 获取所有站点选项
 const siteOptions = computed(() => {
@@ -47,7 +47,7 @@ const siteOptions = computed(() => {
 // 筛选后的数据
 const filteredData = computed(() => {
   return cacheData.value.data.filter(item => {
-    const titleMatch = item.title.toLowerCase().includes(titleFilter.value.toLowerCase())
+    const titleMatch = !titleFilter.value || item.title?.toLowerCase().includes(titleFilter.value?.toLowerCase())
     const siteMatch = !siteFilter.value || item.site_name === siteFilter.value
     return titleMatch && siteMatch
   })
