@@ -22,6 +22,7 @@ const { t } = useI18n()
 const SystemSettings = ref<any>({
   // 基础设置
   Basic: {
+    DB_TYPE: 'sqlite',
     APP_DOMAIN: null,
     API_TOKEN: null,
     WALLPAPER: 'tmdb',
@@ -818,7 +819,7 @@ onDeactivated(() => {
                     persistent-hint
                   />
                 </VCol>
-                <VCol cols="12" md="6">
+                <VCol v-if="SystemSettings.Basic.DB_TYPE === 'sqlite'" cols="12" md="6">
                   <VSwitch
                     v-model="SystemSettings.Advanced.DB_WAL_ENABLE"
                     :label="t('setting.system.dbWalEnable')"

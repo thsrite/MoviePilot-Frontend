@@ -1202,7 +1202,7 @@ export default {
       workflowStatisticShareHint: '分享工作流統計數據到熱門工作流，供其他MPer參考',
       bigMemoryMode: '大內存模式',
       bigMemoryModeHint: '使用更大的內存緩存數據，提升系統性能',
-      dbWalEnable: 'WAL模式',
+      dbWalEnable: '數據庫WAL模式',
       dbWalEnableHint: '可提升讀寫併發性能，但可能在異常情況下增加數據丟失風險，更改後需重啟生效',
       tmdbApiDomain: 'TMDB API服務地址',
       tmdbApiDomainPlaceholder: 'api.themoviedb.org',

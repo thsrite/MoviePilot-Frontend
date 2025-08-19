@@ -1208,7 +1208,7 @@ export default {
       workflowStatisticShareHint: 'Share workflow statistics to popular workflows for other MP users to reference',
       bigMemoryMode: 'Large Memory Mode',
       bigMemoryModeHint: 'Use more memory to cache data and improve system performance',
-      dbWalEnable: 'WAL Mode',
+      dbWalEnable: 'Sqlite WAL Mode',
       dbWalEnableHint:
         'Can improve read/write concurrency performance, but may increase the risk of data loss in exceptional cases, requires restart to take effect',
       tmdbApiDomain: 'TMDB API Service Address',
